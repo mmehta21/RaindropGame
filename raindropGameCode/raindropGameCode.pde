@@ -1,5 +1,6 @@
 PVector mouse;   //declare a P
-Raindrop r;      //declare a new Raindrop called r
+int count=4;
+Raindrop []r= new Raindrop[count];//declare a new Raindrop called r
 
 // On your own, create an array of Raindrop objects instead of just one
 // Use the array instead of the single object
@@ -9,7 +10,9 @@ Raindrop r;      //declare a new Raindrop called r
 void setup() {
   size(1200, 800);
   mouse = new PVector();                //initialize mouse PVector. value is irrelevant since it will be set at the start of void draw(){}
-  r = new Raindrop(random(width), 0);   //Initialize r. The parameters used are the initial x and y positions
+  for (int i=0; i<count; i++) {
+    r[i] = new Raindrop(random(width), 0);//Initialize r. The parameters used are the initial x and y positions
+  }
 }
 
 void draw() {
