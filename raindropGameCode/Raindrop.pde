@@ -16,4 +16,4 @@ class Raindrop {
   void reset(){
     loc.x=0;
   }
-  
+}
