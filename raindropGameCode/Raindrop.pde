@@ -1,7 +1,7 @@
-class Raindrop {
+class Raindrops {
   float diam=20;
   PVector loc, acc, vel;
-  Raindrop(float x, float y) {
+  Raindrops(float x, float y) {
     loc=new PVector(x, y);
     vel=PVector.random2D();
     acc=new PVector(0,.05);
@@ -20,10 +20,10 @@ class Raindrop {
     vel=PVector.random2D();
     vel.add(acc);
   }
-  boolean isInContactWith(PVector mouse){
-    return mouse.dist(loc)<= diam/2;
+  boolean isInContactWith(Bucket other){
+    if(loc.dist(other.loc) < diam/2 + other.diam/2){
+    return true;
+  }else{
+    return false;
 }
 }
-
-
-  
