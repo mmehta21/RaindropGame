@@ -20,10 +20,11 @@ class Raindrops {
     vel=PVector.random2D();
     vel.add(acc);
   }
-  boolean isInContactWith(Bucket other){
+  boolean isInContactWith(Buckets other){
     if(loc.dist(other.loc) < diam/2 + other.diam/2){
     return true;
   }else{
     return false;
+}
 }
 }

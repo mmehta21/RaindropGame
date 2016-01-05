@@ -1,13 +1,14 @@
-PVector loc;
+
+class Buckets{
+  PVector loc;
 float diam;
-class Bucket{
-  Bucket(float tDiam){
-    tDiam=diam;
+  Buckets(){
     loc= new PVector(mouseX,mouseY);
   }
   
- void display(){
+ void display(float diam){
    fill(0,255,255);
+   loc= new PVector(mouseX,mouseY);
    ellipse(loc.x,loc.y,diam,diam);
  }
 }
